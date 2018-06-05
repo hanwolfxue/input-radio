@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style type="text/css">
+    input[type="radio"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .radio-box {
+        /*font-size: 14px;*/
+        /*color: rgba(0, 0, 0, 0.65);*/
+        /*-webkit-box-sizing: border-box;*/
+        /*box-sizing: border-box;*/
+        /*list-style: none;*/
+        /*display: block;*/
+        /*position: relative;*/
+        /*margin-right: 8px;*/
+        /*cursor: pointer;*/
+        /*transition: all .3s ease;*/
+    }
+
+    .radio-style::before {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #d9d9d9;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        content: "";
+    }
+
+    input[type="radio"]:checked + .radio-style::before {
+        padding: 4px;
+        background-color: blue;
+        background-clip: content-box;
+        border-color: blue;
+    }
+</style>
+
+<label for="cat" class="radio-box">
+    <input type="radio" name="group" id="cat">
+    <span class="radio-style">猫</span>
+</label>
+<label for="dog" class="radio-box">
+    <input type="radio" name="group" id="dog">
+    <span class="radio-style">狗</span>
+</label>
+</body>
+</html>
